@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head><title>Edit JSON</title></head>
+<body>
+    <h2>Edit JSON Data</h2>
+    <form action="/save" method="post">
+        {% for key, value in data.items() %}
+            <label>{{ key }}:</label>
+            <input type="text" name="{{ key }}" value="{{ value }}"><br><br>
+        {% endfor %}
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
